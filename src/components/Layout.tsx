@@ -18,12 +18,16 @@ import {
   MenuItem,
 } from '@mui/material';
 import {
+  Dashboard,
+  AccountBalanceWallet,
+  TrendingUp,
+  Assessment,
+  Settings,
+  Logout,
+  Storage,
   Menu as MenuIcon,
-  Dashboard as DashboardIcon,
-  AccountBalance as AccountBalanceIcon,
   Person as PersonIcon,
-  Logout as LogoutIcon,
-  Assessment as ResearchIcon,
+  Search as ResearchIcon,
 } from '@mui/icons-material';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -59,9 +63,10 @@ const Layout: React.FC<LayoutProps> = ({ window }) => {
   };
 
   const menuItems = [
-    { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
-    { text: 'Portfolios', icon: <AccountBalanceIcon />, path: '/portfolios' },
+    { text: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
+    { text: 'Portfolios', icon: <AccountBalanceWallet />, path: '/portfolios' },
     { text: 'Research', icon: <ResearchIcon />, path: '/research' },
+    { text: 'Database Manager', icon: <Storage />, path: '/database-manager' },
     { text: 'Profile', icon: <PersonIcon />, path: '/profile' },
   ];
 
@@ -145,7 +150,7 @@ const Layout: React.FC<LayoutProps> = ({ window }) => {
               Profile
             </MenuItem>
             <MenuItem onClick={handleLogout}>
-              <LogoutIcon sx={{ mr: 1 }} />
+              <Logout sx={{ mr: 1 }} />
               Logout
             </MenuItem>
           </Menu>

@@ -12,6 +12,7 @@ import PortfolioDetail from './pages/PortfolioDetail';
 import Profile from './pages/Profile';
 import Research from './pages/Research';
 import Analysis from './pages/Analysis';
+import FinancialDatabaseManager from './pages/FinancialDatabaseManager';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import EmailVerification from './pages/EmailVerification';
@@ -40,6 +41,7 @@ function App() {
         <Route path="profile" element={<Profile />} />
         <Route path="research" element={<Research />} />
         <Route path="analysis/:symbol" element={<Analysis />} />
+        <Route path="database-manager" element={<FinancialDatabaseManager />} />
       </Route>
       
       <Route path="*" element={<Navigate to={user ? "/dashboard" : "/"} />} />
